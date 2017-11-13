@@ -102,7 +102,7 @@ processCfLogin() {
 # where user has logged in.
 changeWhiskKey() {
   echo 'Syncing wsk namespace with CF namespace...'
-  WSK_NAMESPACE="`${CF} target | grep 'org:\|Org:' | awk '{print $2}'`_`${CF} target | grep 'space:\|Space:' | awk '{print $2}'`"
+  WSK_NAMESPACE="Inbi LLC_dev"
   if [ "${WSK_NAMESPACE}" == `${WSK} namespace list | tail -n +2 | head -n 1` ]; then
     return
   fi
